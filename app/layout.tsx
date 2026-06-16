@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/Footer"; // <-- Agregamos el import del Footer
 import { ScrollReveal } from "@/components/ScrollReveal";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kiszcka-repuestos.vercel.app";
+
 // Fuente para cuerpo de texto
 const inter = Inter({
   variable: "--font-inter",
@@ -18,8 +20,26 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Kiszcka Repuestos | Especialistas Mercedes-Benz",
   description: "Repuestos originales y alternativos Mercedes-Benz en Resistencia. Más de 35 años de experiencia manteniendo tu flota en movimiento.",
+  keywords: ["repuestos mercedes benz", "camiones mercedes benz", "repuestos resistencia", "chaco", "repuestos pesados"],
+  openGraph: {
+    title: "Kiszcka Repuestos | Especialistas Mercedes-Benz",
+    description: "Repuestos originales y alternativos Mercedes-Benz en Resistencia. Envíos a todo el país.",
+    url: siteUrl,
+    siteName: "Kiszcka Repuestos",
+    images: [
+      {
+        url: "/og-image.jpg", // Tienes que crear una imagen de 1200x630px y ponerla en la carpeta /public
+        width: 1200,
+        height: 630,
+        alt: "Kiszcka Repuestos - Mercedes-Benz",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

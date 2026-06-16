@@ -30,9 +30,10 @@ export function HeroSection() {
 
             {/* Título High-Impact */}
             <div className="space-y-4">
-              <h1 className="font-montserrat text-[2.35rem] min-[380px]:text-[2.65rem] sm:text-5xl lg:text-[4rem] font-black leading-[1.02] sm:leading-[1.05] tracking-tight text-white uppercase drop-shadow-md">
-                REPUESTOS <br className="hidden sm:block"/>MERCEDES-BENZ <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">EN RESISTENCIA.</span>
+              <h1 className="font-montserrat text-[2rem] min-[360px]:text-[2.25rem] min-[420px]:text-[2.55rem] sm:text-5xl lg:text-[4rem] font-black leading-[1.04] sm:leading-[1.05] tracking-tight text-white uppercase drop-shadow-md">
+                <span className="block">REPUESTOS</span>
+                <span className="block">MERCEDES-BENZ</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">EN RESISTENCIA.</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0 mt-5 sm:mt-6">
                 La confianza de Kiszcka Repuestos. Especialistas en stock original y alternativo certificado para mantener tu flota siempre en movimiento.
@@ -57,10 +58,10 @@ export function HeroSection() {
                 href="https://wa.me/5493624540740"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-[#102C57] px-8 py-4 rounded-xl font-bold text-[15px] tracking-wide shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-gray-300 font-montserrat uppercase"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-[#102C57] px-8 py-4 rounded-xl font-bold text-[15px] tracking-wide shadow-xl hover:bg-gray-100 active:bg-gray-100 hover:shadow-2xl active:shadow-2xl transition-all duration-300 border border-transparent hover:border-gray-300 active:border-gray-300 font-montserrat uppercase"
                 aria-label="Consultar stock ahora por WhatsApp"
               >
-                <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110 group-active:scale-110" />
                 CONSULTAR STOCK AHORA
               </a>
               <p className="mt-4 text-xs text-slate-500 font-medium tracking-wide text-center lg:text-left">
@@ -83,7 +84,7 @@ export function HeroSection() {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover scale-105 hover:scale-100 transition-transform duration-700 ease-in-out"
+                className="object-cover scale-105 hover:scale-100 active:scale-100 transition-transform duration-700 ease-in-out"
               />
             </div>
 
@@ -91,8 +92,8 @@ export function HeroSection() {
             <div 
               className={`absolute -bottom-12 left-4 right-4 sm:left-auto sm:right-auto sm:-bottom-8 sm:-left-8 lg:-left-12 z-30 bg-gradient-to-b from-gray-50 to-gray-200 border border-white/80 text-[#102C57] rounded-xl shadow-2xl transition-all duration-300 flex flex-col ${
                 showMap 
-                  ? 'sm:w-[360px] p-2 hover:scale-100' // Estado Expandido
-                  : 'px-5 sm:px-6 lg:px-8 py-4 lg:py-5 hover:scale-105 cursor-pointer' // Estado Contraído (Botón)
+                  ? 'sm:w-[360px] p-2 hover:scale-100 active:scale-100' // Estado Expandido
+                  : 'px-5 sm:px-6 lg:px-8 py-4 lg:py-5 hover:scale-105 active:scale-105 cursor-pointer' // Estado Contraído (Botón)
               }`}
             >
               
@@ -119,7 +120,7 @@ export function HeroSection() {
                     </span>
                     <button 
                       onClick={() => setShowMap(false)} 
-                      className="p-1.5 hover:bg-black/5 rounded-md transition-colors" 
+                      className="p-1.5 hover:bg-black/5 active:bg-black/5 rounded-md transition-colors" 
                       aria-label="Cerrar mapa"
                     >
                       <X className="w-4 h-4 text-slate-600" />
@@ -145,7 +146,7 @@ export function HeroSection() {
                     href="https://www.google.com/maps/search/?api=1&query=Av.+25+de+Mayo+1975,+Resistencia,+Chaco"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2.5 flex items-center justify-center gap-2 w-full py-3 bg-[#0B1E3B] text-white text-[11px] sm:text-xs font-bold uppercase font-montserrat tracking-wider rounded-lg hover:bg-[#1a3d6f] transition-colors shadow-md"
+                    className="mt-2.5 flex items-center justify-center gap-2 w-full py-3 bg-[#0B1E3B] text-white text-[11px] sm:text-xs font-bold uppercase font-montserrat tracking-wider rounded-lg hover:bg-[#1a3d6f] active:bg-[#1a3d6f] transition-colors shadow-md"
                   >
                     Abrir en la aplicación <ExternalLink className="w-3.5 h-3.5" />
                   </a>

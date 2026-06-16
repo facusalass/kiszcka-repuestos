@@ -64,7 +64,7 @@ export function CatalogSection() {
           {categories.map((category, index) => (
             <article
               key={index}
-                className="group bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
+                className="group bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1 active:-translate-y-1"
             >
               {/* Imagen con Overlay Premium */}
               <div className="aspect-[4/3] w-full overflow-hidden bg-slate-200 relative">
@@ -73,10 +73,10 @@ export function CatalogSection() {
                   alt={category.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  className="object-cover group-hover:scale-110 group-active:scale-110 transition-transform duration-700 ease-in-out"
                 />
                 {/* Degradado oscuro para integrar la imagen al diseño */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3B]/80 via-[#0B1E3B]/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3B]/80 via-[#0B1E3B]/20 to-transparent opacity-60 group-hover:opacity-40 group-active:opacity-40 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               
               {/* Contenido de la Tarjeta */}
@@ -96,11 +96,11 @@ export function CatalogSection() {
                   href="https://wa.me/5493624540740"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#0B1E3B] font-bold text-sm uppercase tracking-wide group-hover:text-[#22D3EE] transition-colors mt-auto w-fit font-montserrat"
+                  className="inline-flex items-center gap-2 text-[#0B1E3B] font-bold text-sm uppercase tracking-wide group-hover:text-[#22D3EE] group-active:text-[#22D3EE] transition-colors mt-auto w-fit font-montserrat"
                   aria-label={`Consultar stock de ${category.name}`}
                 >
                   Consultar Stock
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 group-active:translate-x-1 transition-transform" />
                 </a>
               </div>
             </article>
@@ -124,7 +124,7 @@ export function CatalogSection() {
               href="https://wa.me/5493624540740"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#102C57] px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-montserrat font-bold text-sm md:text-[15px] tracking-wide shadow-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 uppercase border border-transparent hover:border-gray-200 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#102C57] px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-montserrat font-bold text-sm md:text-[15px] tracking-wide shadow-lg hover:bg-gray-100 active:bg-gray-100 hover:shadow-xl active:shadow-xl transition-all duration-300 uppercase border border-transparent hover:border-gray-200 active:border-gray-200 w-full sm:w-auto"
             >
               Consultar a un Especialista
               <ArrowRight className="w-5 h-5" strokeWidth={2.5} />

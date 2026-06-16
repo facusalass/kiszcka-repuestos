@@ -22,11 +22,11 @@ export function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 md:mb-24 scroll-reveal">
           
           {/* Tarjeta WhatsApp (Mantiene el celular) */}
-          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1">
+          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
              {/* Línea decorativa */}
-             <div className="absolute top-0 left-0 w-full h-1 bg-[#25D366] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
+             <div className="absolute top-0 left-0 w-full h-1 bg-[#25D366] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
             
-            <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+            <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">
               <MessageCircle className="w-8 h-8 text-[#25D366]" strokeWidth={1.5} />
             </div>
             
@@ -42,7 +42,7 @@ export function ContactSection() {
                 href="https://wa.me/5493624540740"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#0B1E3B] text-white px-6 py-3.5 rounded-lg font-bold text-[13px] md:text-[14px] font-montserrat uppercase tracking-wide shadow-md hover:bg-[#1a3d6f] hover:shadow-lg transition-all w-full"
+                className="inline-flex items-center justify-center gap-2 bg-[#0B1E3B] text-white px-6 py-3.5 rounded-lg font-bold text-[13px] md:text-[14px] font-montserrat uppercase tracking-wide shadow-md hover:bg-[#1a3d6f] active:bg-[#1a3d6f] hover:shadow-lg active:shadow-lg transition-all w-full"
                 aria-label="Iniciar chat por WhatsApp"
               >
                 Iniciar Chat
@@ -52,11 +52,11 @@ export function ContactSection() {
           </div>
 
           {/* Tarjeta Teléfono (Actualizado al fijo) */}
-          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1">
+          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
              {/* Línea decorativa */}
-             <div className="absolute top-0 left-0 w-full h-1 bg-[#0B1E3B] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
+             <div className="absolute top-0 left-0 w-full h-1 bg-[#0B1E3B] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 
-            <div className="w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+            <div className="w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">
               <Phone className="w-8 h-8 text-[#0B1E3B]" strokeWidth={1.5} />
             </div>
             
@@ -69,7 +69,7 @@ export function ContactSection() {
             
             <div className="mt-auto flex items-center justify-center h-[52px]">
               <a
-                className="inline-block text-2xl lg:text-3xl font-black text-[#0B1E3B] hover:text-[#22D3EE] transition-colors font-montserrat tracking-tighter"
+                className="inline-block text-2xl lg:text-3xl font-black text-[#0B1E3B] hover:text-[#22D3EE] active:text-[#22D3EE] transition-colors font-montserrat tracking-tighter"
                 aria-label="Llamar a la línea telefónica"
               >
                 4462894
@@ -78,11 +78,11 @@ export function ContactSection() {
           </div>
 
           {/* Tarjeta Instagram */}
-          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1">
+          <div className="group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
              {/* Línea decorativa (Degradado Instagram) */}
-             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
+             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 
-            <div className="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+            <div className="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">
               {/* SVG de Instagram insertado manualmente */}
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -114,7 +114,7 @@ export function ContactSection() {
                 href="https://instagram.com/kiszckarepuestos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#0B1E3B] text-white px-6 py-3.5 rounded-lg font-bold text-[13px] md:text-[14px] font-montserrat uppercase tracking-wide shadow-md hover:bg-[#1a3d6f] hover:shadow-lg transition-all w-full"
+                className="inline-flex items-center justify-center gap-2 bg-[#0B1E3B] text-white px-6 py-3.5 rounded-lg font-bold text-[13px] md:text-[14px] font-montserrat uppercase tracking-wide shadow-md hover:bg-[#1a3d6f] active:bg-[#1a3d6f] hover:shadow-lg active:shadow-lg transition-all w-full"
                 aria-label="Ir a nuestro perfil de Instagram"
               >
                 @kiszckarepuestos

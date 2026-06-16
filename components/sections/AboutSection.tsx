@@ -44,8 +44,8 @@ export function AboutSection() {
           <div className="space-y-4 sm:space-y-5 scroll-reveal">
             
             {/* Stat 1 */}
-            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-[#22D3EE]/30 transition-transform duration-300">
+            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 active:border-slate-300 hover:shadow-lg active:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-active:scale-110 group-hover:border-[#22D3EE]/30 group-active:border-[#22D3EE]/30 transition-transform duration-300">
                 <Award className="w-8 h-8 text-[#102C57]" strokeWidth={1.5} />
               </div>
               <div>
@@ -59,8 +59,8 @@ export function AboutSection() {
             </div>
 
             {/* Stat 2 */}
-            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-[#22D3EE]/30 transition-transform duration-300">
+            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 active:border-slate-300 hover:shadow-lg active:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-active:scale-110 group-hover:border-[#22D3EE]/30 group-active:border-[#22D3EE]/30 transition-transform duration-300">
                 <Users className="w-8 h-8 text-[#102C57]" strokeWidth={1.5} />
               </div>
               <div>
@@ -74,8 +74,8 @@ export function AboutSection() {
             </div>
 
             {/* Stat 3 */}
-            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-[#22D3EE]/30 transition-transform duration-300">
+            <div className="group bg-slate-50 p-5 sm:p-6 md:p-8 rounded-xl border border-slate-100 hover:border-slate-300 active:border-slate-300 hover:shadow-lg active:shadow-lg transition-all duration-300 flex items-start sm:items-center gap-4 sm:gap-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-active:scale-110 group-hover:border-[#22D3EE]/30 group-active:border-[#22D3EE]/30 transition-transform duration-300">
                 <TrendingUp className="w-8 h-8 text-[#102C57]" strokeWidth={1.5} />
               </div>
               <div>

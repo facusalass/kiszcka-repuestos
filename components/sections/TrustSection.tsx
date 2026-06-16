@@ -54,14 +54,14 @@ export function TrustSection() {
             return (
               <article
                 key={index}
-                className="group relative bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col items-start"
+                className="group relative bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 overflow-hidden flex flex-col items-start"
               >
                 {/* Borde Superior de Acento (Cyan) */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#22D3EE] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#22D3EE] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
                 
                 {/* Ícono */}
-                <div className="w-12 h-12 bg-slate-50 group-hover:bg-[#102C57] rounded-lg flex items-center justify-center mb-6 transition-colors duration-300 shrink-0">
-                  <Icon className="w-6 h-6 text-[#102C57] group-hover:text-white transition-colors" strokeWidth={1.5} />
+                <div className="w-12 h-12 bg-slate-50 group-hover:bg-[#102C57] group-active:bg-[#102C57] rounded-lg flex items-center justify-center mb-6 transition-colors duration-300 shrink-0">
+                  <Icon className="w-6 h-6 text-[#102C57] group-hover:text-white group-active:text-white transition-colors" strokeWidth={1.5} />
                 </div>
                 
                 {/* Texto de las tarjetas */}

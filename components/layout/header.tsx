@@ -22,10 +22,10 @@ export function Header() {
               href="https://maps.google.com/?q=Av+25+de+Mayo+1975,+Resistencia" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group"
+              className="flex items-center gap-2 hover:text-white active:text-white transition-colors cursor-pointer group"
               aria-label="Ver ubicación en Av. 25 de Mayo 1975"
             >
-              <MapPin className="w-4 h-4 text-gray-400 group-hover:text-[#22D3EE] transition-colors" strokeWidth={1.5} />
+              <MapPin className="w-4 h-4 text-gray-400 group-hover:text-[#22D3EE] group-active:text-[#22D3EE] transition-colors" strokeWidth={1.5} />
               <span className="underline decoration-gray-500 underline-offset-4">
                 Av. 25 de Mayo 1975
               </span>
@@ -39,7 +39,7 @@ export function Header() {
               </div>
               <a 
                 href="tel:+5493624540740" 
-                className="flex items-center gap-2 hover:text-white transition-colors font-medium"
+                className="flex items-center gap-2 hover:text-white active:text-white transition-colors font-medium"
                 aria-label="Llamar al teléfono"
               >
                 <Phone className="w-4 h-4" strokeWidth={1.5} />
@@ -87,7 +87,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-3.5 py-2 text-[12px] font-bold uppercase tracking-wide text-slate-300 transition-colors hover:bg-white/10 hover:text-white font-montserrat"
+                className="rounded-lg px-3.5 py-2 text-[12px] font-bold uppercase tracking-wide text-slate-300 transition-colors hover:bg-white/10 active:bg-white/10 hover:text-white active:text-white font-montserrat"
               >
                 {item.label}
               </Link>
@@ -99,7 +99,7 @@ export function Header() {
             href="https://instagram.com/tu_usuario_aqui"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-white text-[#102C57] p-3 sm:px-5 md:px-6 sm:py-2.5 md:py-3 rounded-lg font-montserrat font-bold text-sm md:text-[15px] tracking-wide shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-200 shrink-0 group uppercase"
+            className="flex items-center justify-center gap-2 bg-white text-[#102C57] p-3 sm:px-5 md:px-6 sm:py-2.5 md:py-3 rounded-lg font-montserrat font-bold text-sm md:text-[15px] tracking-wide shadow-md hover:bg-gray-100 active:bg-gray-100 hover:shadow-lg active:shadow-lg transition-all duration-200 shrink-0 group uppercase"
             aria-label="Visitar nuestro Instagram"
           >
             <svg 
@@ -112,7 +112,7 @@ export function Header() {
               strokeWidth="2" 
               strokeLinecap="round" 
               strokeLinejoin="round" 
-              className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-110"
+              className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-110 group-active:scale-110"
             >
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -133,7 +133,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="shrink-0 rounded-lg px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-300 transition-colors hover:bg-white/10 hover:text-white font-montserrat"
+                className="shrink-0 rounded-lg px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-300 transition-colors hover:bg-white/10 active:bg-white/10 hover:text-white active:text-white font-montserrat"
               >
                 {item.label}
               </Link>
