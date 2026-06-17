@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    cpus: 1,
+    staticGenerationMaxConcurrency: 1,
+    workerThreads: true,
+  },
   images: {
     remotePatterns: [
       {

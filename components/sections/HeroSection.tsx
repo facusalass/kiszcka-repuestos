@@ -12,7 +12,7 @@ export function HeroSection() {
     <section id="inicio" className="relative scroll-mt-24 bg-[#0B1E3B] pt-10 pb-36 sm:pt-12 sm:pb-32 lg:pt-20 lg:pb-32 overflow-hidden w-full">
       
       {/* Luz Industrial de Fondo */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-slate-400/5 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden sm:block w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-slate-400/5 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
 
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-10 sm:gap-16 lg:gap-8 items-center">
