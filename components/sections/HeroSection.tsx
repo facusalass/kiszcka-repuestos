@@ -79,7 +79,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-[#102C57]/20 mix-blend-multiply z-10 pointer-events-none"></div>
               
               <Image
-                src="https://images.unsplash.com/photo-1714873383875-58cb3fa5f5e1?q=80&w=1000&auto=format&fit=crop" 
+                src="https://res.cloudinary.com/dcasnymut/image/upload/v1782143956/camion-mercedes-benz-repuestos-resistencia.jpg_rodfvm.avif" 
                 alt="Camión Mercedes-Benz clásico y repuestos pesados en Resistencia"
                 fill
                 priority

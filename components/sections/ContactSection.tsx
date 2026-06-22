@@ -2,7 +2,7 @@ import { MessageCircle, Phone, Clock, CalendarDays, Send } from 'lucide-react';
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="mobile-performance-saver relative scroll-mt-24 py-14 md:py-24 bg-white w-full">
+    <section id="contacto" className="mobile-performance-saver relative scroll-mt-24 py-14 md:py-24 bg-page w-full">
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-10 md:mb-16 w-full max-w-3xl mx-auto scroll-reveal">
           <span className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#22D3EE] uppercase mb-4 block font-montserrat">
@@ -17,7 +17,7 @@ export function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 md:mb-24 scroll-reveal">
-          <div className="tap-card group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
+          <div className="tap-card group relative bg-surface rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#25D366] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 
             <div className="tap-icon w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">
@@ -45,7 +45,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="tap-card group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
+          <div className="tap-card group relative bg-surface rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#0B1E3B] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 
             <div className="tap-icon w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">
@@ -69,7 +69,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="tap-card group relative bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
+          <div className="tap-card group relative bg-surface rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 p-6 sm:p-8 lg:p-10 text-center overflow-hidden flex flex-col hover:-translate-y-1 active:-translate-y-1">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 
             <div className="tap-icon w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shrink-0">

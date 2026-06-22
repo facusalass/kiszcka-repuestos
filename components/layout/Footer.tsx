@@ -1,5 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Clock, ChevronRight, MessageCircle } from 'lucide-react';
+
+const logoUrl = 'https://res.cloudinary.com/dcasnymut/image/upload/v1781913298/logoalejpg.jpg_zfj6yj.jpg';
 
 export function Footer() {
   return (
@@ -11,8 +14,14 @@ export function Footer() {
           <div className="md:col-span-4 lg:col-span-5">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
               {/* Isologo */}
-              <div className="w-11 h-11 bg-gradient-to-b from-gray-50 to-gray-200 rounded-lg flex items-center justify-center border border-white/20 shrink-0">
-                <span className="text-[#102C57] font-black text-2xl font-serif">K</span>
+              <div className="relative h-14 w-14 shrink-0 md:h-16 md:w-16">
+                <Image
+                  src={logoUrl}
+                  alt="Logo Kiszcka Repuestos"
+                  fill
+                  sizes="(min-width: 768px) 64px, 56px"
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="text-xl font-bold uppercase tracking-tight leading-none flex items-baseline gap-1 font-montserrat">

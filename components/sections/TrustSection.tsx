@@ -52,7 +52,7 @@ export function TrustSection() {
               <article
                 key={index}
                 data-tap-card
-                className="tap-card group relative bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 overflow-hidden flex flex-col items-start"
+                className="tap-card group relative bg-surface p-5 sm:p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 overflow-hidden flex flex-col items-start"
               >
                 <div className="tap-accent absolute top-0 left-0 w-full h-1 bg-[#22D3EE] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 pointer-events-none"></div>
 

@@ -1,5 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, MapPin, Clock } from 'lucide-react';
+
+// URL actualizada con tu versión en PNG transparente
+const logoUrl = 'https://res.cloudinary.com/dcasnymut/image/upload/v1781913298/logoalepng_a0cdei.png';
 
 const navigationItems = [
   { label: 'Inicio', href: '#inicio' },
@@ -53,32 +57,27 @@ export function Header() {
 
       {/* Main Header */}
       <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
-        <div className="flex flex-row items-center justify-between gap-3 py-3.5 md:py-5">
+        <div className="flex flex-row items-center justify-between gap-3 py-3.5 md:py-4">
           
           {/* Brand Logo Area */}
+         {/* Brand Logo Area */}
           <Link 
             href="#inicio" 
-            className="flex min-w-0 items-center gap-2.5 md:gap-4 group focus:outline-none focus:ring-2 focus:ring-white/20 rounded-lg"
+            className="flex min-w-0 items-center group focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/50 rounded-lg"
             aria-label="Volver al inicio - Kiszcka Repuestos"
           >
-            {/* Isologo (Tamaño original restaurado pero con bordes de la foto) */}
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-b from-gray-50 to-gray-200 rounded-lg shadow-inner flex items-center justify-center shrink-0">
-              <span className="text-[#102C57] font-bold text-2xl md:text-3xl font-serif">K</span>
-            </div>
-            
-            {/* Textos de Marca (Escala corregida) */}
-            {/* Textos de Marca (Pixel Perfect según imagen) */}
-            <div className="flex min-w-0 flex-col justify-center">
-              <div className="flex min-w-0 items-baseline gap-1.5 text-[15px] min-[380px]:text-[17px] sm:text-[22px] md:text-[26px] leading-none uppercase font-montserrat whitespace-nowrap">
-                <span className="font-black text-white tracking-tight">KISZCKA</span>
-                <span className="font-medium text-gray-200 truncate">REPUESTOS S.H</span>
-              </div>
-              <span className="text-[7.5px] min-[380px]:text-[8.5px] md:text-[10.5px] text-gray-400 font-montserrat font-bold tracking-[0.16em] md:tracking-[0.22em] uppercase mt-1.5 truncate">
-                Especialistas Mercedes-Benz
-              </span>
+            <div className="relative h-[55px] w-[180px] sm:h-[65px] sm:w-[220px] md:h-[75px] md:w-[260px] lg:h-[85px] lg:w-[290px] shrink-0 transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
+              <Image
+                src={logoUrl}
+                alt="Logo Kiszcka Repuestos"
+                fill
+                sizes="(min-width: 1024px) 290px, (min-width: 768px) 260px, 220px"
+                // 👇 AQUÍ ESTÁ LA MAGIA: brightness-0 lo vuelve negro, invert lo vuelve blanco
+                className="object-contain brightness-0 invert drop-shadow-md" 
+                priority
+              />
             </div>
           </Link>
-
           <nav
             className="hidden xl:flex items-center gap-1 rounded-xl border border-white/10 bg-white/5 px-1.5 py-1"
             aria-label="Navegación principal"
@@ -94,9 +93,9 @@ export function Header() {
             ))}
           </nav>
 
-          {/* High-Ticket CTA Button - Instagram Restaurado */}
+          {/* High-Ticket CTA Button - Instagram */}
           <a
-            href="https://instagram.com/tu_usuario_aqui"
+            href="https://instagram.com/kiszckarepuestos"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-white text-[#102C57] p-3 sm:px-5 md:px-6 sm:py-2.5 md:py-3 rounded-lg font-montserrat font-bold text-sm md:text-[15px] tracking-wide shadow-md hover:bg-gray-100 active:bg-gray-100 hover:shadow-lg active:shadow-lg transition-all duration-200 shrink-0 group uppercase"

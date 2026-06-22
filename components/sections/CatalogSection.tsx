@@ -5,32 +5,32 @@ export function CatalogSection() {
   const categories = [
     {
       name: "Filtros Especializados",
-      image: "https://images.unsplash.com/photo-1505635374747-431af16edaf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782145244/filtro-aceite-motor-camion-mercedes-benz_tqiujd.jpg",
       description: "Filtros de aire, combustible, aceite y habitáculo para máximo rendimiento."
     },
     {
       name: "Sistema de Frenos",
-      image: "https://images.unsplash.com/photo-1674564852576-0452bade2508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782145754/cintas-frenos-aire-camion-mercedes-benz_dex7xo.jpg",
       description: "Pastillas, discos, tambores y componentes."
     },
     {
       name: "Motor y Componentes",
-      image: "https://images.unsplash.com/photo-1429772011165-0c2e054367b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146041/tapa-cilindros-motor-mercedes-benz_rmihrs.jpg",
       description: "Pistones, bielas, cojinetes y juntas."
     },
     {
       name: "Transmisión y Embrague",
-      image: "https://images.unsplash.com/photo-1567093322102-6bdd32fba67d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146608/engranajes-caja-transmision-mercedes-benz_tjw85r.jpg",
       description: "Placas, discos, sincronizados y accesorios."
     },
     {
       name: "Suspensión y Dirección",
-      image: "https://images.unsplash.com/photo-1632074251537-0c33a9f728cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146858/suspension-direccion-camion-mercedes-benz_lugqxa.jpg",
       description: "Amortiguadores, resortes, bujes y extremos."
     },
     {
       name: "Sistema Eléctrico",
-      image: "https://images.unsplash.com/photo-1663642775693-6628f65358be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+      image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146693/repuestos-electricos-camion-resistencia_ugiylc.jpg",
       description: "Alternadores, arranques y sensores."
     }
   ];
@@ -62,7 +62,7 @@ export function CatalogSection() {
             <article
               key={index}
               data-tap-card
-              className="tap-card group bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1 active:-translate-y-1"
+              className="tap-card group bg-surface rounded-xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl active:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1 active:-translate-y-1"
             >
               <div className="aspect-[4/3] w-full overflow-hidden bg-slate-200 relative">
                 <Image
@@ -75,7 +75,7 @@ export function CatalogSection() {
                 <div className="tap-overlay absolute inset-0 bg-gradient-to-t from-[#0B1E3B]/80 via-[#0B1E3B]/20 to-transparent opacity-60 group-hover:opacity-40 group-active:opacity-40 transition-opacity duration-300 pointer-events-none"></div>
               </div>
 
-              <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-grow relative bg-white">
+              <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-grow relative bg-surface">
                 <div className="absolute top-0 left-6 md:left-8 w-12 h-1 bg-[#22D3EE] -translate-y-1/2"></div>
 
                 <h3 className="tap-title text-lg md:text-xl font-bold text-[#0B1E3B] mb-3 font-montserrat tracking-tight leading-tight">

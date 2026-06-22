@@ -12,7 +12,26 @@ export const metadata: Metadata = {
   title: "Kiszcka Repuestos | Especialistas Mercedes-Benz",
   description:
     "Repuestos originales y alternativos Mercedes-Benz en Resistencia. Más de 35 años de experiencia manteniendo tu flota en movimiento.",
-  keywords: ["repuestos mercedes benz", "camiones mercedes benz", "repuestos resistencia", "chaco", "repuestos pesados"],
+  keywords: [
+    "repuestos mercedes benz", 
+    "camiones mercedes benz", 
+    "repuestos resistencia", 
+    "chaco", 
+    "repuestos pesados"
+  ],
+  
+  // Le damos luz verde total a los robots de Google
+  robots: {
+    index: true,
+    follow: true,
+  },
+  
+  // Definimos la URL principal para evitar contenido duplicado
+  alternates: {
+    canonical: "/",
+  },
+
+  // OpenGraph: Para WhatsApp, Facebook, LinkedIn
   openGraph: {
     title: "Kiszcka Repuestos | Especialistas Mercedes-Benz",
     description: "Repuestos originales y alternativos Mercedes-Benz en Resistencia. Envíos a todo el país.",
@@ -23,11 +42,19 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Kiszcka Repuestos - Mercedes-Benz",
+        alt: "Kiszcka Repuestos - Especialistas Mercedes-Benz",
       },
     ],
     locale: "es_AR",
     type: "website",
+  },
+
+  // Twitter: Soporte extra para que las tarjetas se vean grandes en todos los chats
+  twitter: {
+    card: "summary_large_image",
+    title: "Kiszcka Repuestos | Especialistas Mercedes-Benz",
+    description: "Repuestos originales y alternativos Mercedes-Benz en Resistencia. Envíos a todo el país.",
+    images: ["/og-image.jpg"],
   },
 };
 
