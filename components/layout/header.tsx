@@ -5,11 +5,12 @@ import { Phone, MapPin, Clock } from 'lucide-react';
 // URL actualizada con tu versión en PNG transparente
 const logoUrl = 'https://res.cloudinary.com/dcasnymut/image/upload/v1781913298/logoalepng_a0cdei.png';
 
+// Enlaces corregidos con la barra "/" para evitar el bug de Next.js
 const navigationItems = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Sobre Nosotros', href: '#nosotros' },
-  { label: 'Catálogo', href: '#catalogo' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/#inicio' },
+  { label: 'Sobre Nosotros', href: '/#nosotros' },
+  { label: 'Catálogo', href: '/#catalogo' },
+  { label: 'Contacto', href: '/#contacto' },
 ];
 
 export function Header() {
@@ -60,9 +61,8 @@ export function Header() {
         <div className="flex flex-row items-center justify-between gap-3 py-3.5 md:py-4">
           
           {/* Brand Logo Area */}
-         {/* Brand Logo Area */}
           <Link 
-            href="#inicio" 
+            href="/#inicio" 
             className="flex min-w-0 items-center group focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/50 rounded-lg"
             aria-label="Volver al inicio - Kiszcka Repuestos"
           >
@@ -72,12 +72,12 @@ export function Header() {
                 alt="Logo Kiszcka Repuestos"
                 fill
                 sizes="(min-width: 1024px) 290px, (min-width: 768px) 260px, 220px"
-                // 👇 AQUÍ ESTÁ LA MAGIA: brightness-0 lo vuelve negro, invert lo vuelve blanco
                 className="object-contain brightness-0 invert drop-shadow-md" 
                 priority
               />
             </div>
           </Link>
+
           <nav
             className="hidden xl:flex items-center gap-1 rounded-xl border border-white/10 bg-white/5 px-1.5 py-1"
             aria-label="Navegación principal"
