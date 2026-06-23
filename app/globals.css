@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f3ea;
-  --surface: #fbf8f1;
+  --background: #f7f8fa;
+  --surface: #fcfcfd;
   --foreground: #171717;
   --font-inter: ui-sans-serif, system-ui, sans-serif;
   --font-montserrat: ui-sans-serif, system-ui, sans-serif;
@@ -30,8 +30,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f7f3ea;
-    --surface: #fbf8f1;
+    --background: #f7f8fa;
+    --surface: #fcfcfd;
     --foreground: #171717;
   }
 }
