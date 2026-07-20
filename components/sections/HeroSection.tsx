@@ -1,12 +1,68 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { MessageCircle, CheckCircle2, MapPin, X, ExternalLink, Phone, Clock } from 'lucide-react';
 
+const heroImages = [
+  {
+    src: "https://res.cloudinary.com/dcasnymut/image/upload/v1784588105/camion-atego_mt4gmw.jpg",
+    alt: "Camión Mercedes-Benz Atego"
+  },
+  {
+    src: "https://res.cloudinary.com/dcasnymut/image/upload/v1784588420/camion-axor_worw9b.jpg",
+    alt: "Camión Mercedes-Benz Axor"
+  },
+  {
+    src: "https://res.cloudinary.com/dcasnymut/image/upload/v1784588429/camion-actros_kx6bry.jpg",
+    alt: "Camión Mercedes-Benz Actros"
+  },
+  {
+    src: "https://res.cloudinary.com/dcasnymut/image/upload/v1784588430/camion-sprinter_mznsfu.jpg",
+    alt: "Camión Mercedes-Benz Sprinter"
+  },
+];
+
+const SWIPE_THRESHOLD = 40;
+
 export function HeroSection() {
-  // Estado para controlar si el mapa está visible o no
   const [showMap, setShowMap] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(nextSlide, 6000);
+    return () => clearInterval(id);
+  }, [currentSlide, nextSlide]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const deltaX = touchStartX.current - touchEndX.current;
+    if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      if (deltaX > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+  }, [nextSlide, prevSlide]);
 
   return (
     <section id="inicio" className="relative scroll-mt-24 bg-[#0B1E3B] pt-10 pb-36 sm:pt-12 sm:pb-32 lg:pt-20 lg:pb-32 overflow-hidden w-full">
@@ -95,23 +151,49 @@ export function HeroSection() {
           {/* Right Image Container */}
           <div className="lg:col-span-5 relative mt-2 sm:mt-8 lg:mt-0 scroll-reveal">
             {/* Marco Industrial Asimétrico */}
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-l border-white/20 h-[310px] min-[380px]:h-[350px] sm:h-[450px] lg:h-[600px] w-full">
+            <div
+              className="relative z-10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-l border-white/20 h-[310px] min-[380px]:h-[350px] sm:h-[450px] lg:h-[600px] w-full touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               {/* Overlay oscuro */}
               <div className="absolute inset-0 bg-[#102C57]/20 mix-blend-multiply z-10 pointer-events-none"></div>
               
-              <Image
-                src="https://res.cloudinary.com/dcasnymut/image/upload/v1784584108/camion_gdzdmn.png" 
-                alt="Camión Mercedes-Benz clásico y repuestos pesados en Resistencia"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover scale-105 hover:scale-100 active:scale-100 transition-transform duration-700 ease-in-out"
-              />
+              {heroImages.map((image, index) => (
+                <Image
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={index === 0}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className={`object-cover transition-opacity duration-700 ease-in-out ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+
+              {/* Navigation Dots */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentSlide
+                        ? 'bg-white scale-125'
+                        : 'bg-white/50 hover:bg-white/80'
+                    }`}
+                    aria-label={`Ver imagen ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Floating Map Widget Interactiva */}
             <div 
-              className={`absolute -bottom-12 left-4 right-4 sm:left-auto sm:right-auto sm:-bottom-8 sm:-left-8 lg:-left-12 z-30 bg-gradient-to-b from-gray-50 to-gray-200 border border-white/80 text-[#102C57] rounded-xl shadow-2xl transition-all duration-300 flex flex-col ${
+              className={`absolute -bottom-24 left-4 right-4 sm:left-auto sm:right-auto sm:-bottom-20 sm:-left-8 lg:-left-12 z-30 bg-gradient-to-b from-gray-50 to-gray-200 border border-white/80 text-[#102C57] rounded-xl shadow-2xl transition-all duration-300 flex flex-col ${
                 showMap 
                   ? 'sm:w-[360px] p-2 hover:scale-100 active:scale-100' // Estado Expandido
                   : 'px-5 sm:px-6 lg:px-8 py-4 lg:py-5 hover:scale-105 active:scale-105 cursor-pointer' // Estado Contraído (Botón)
