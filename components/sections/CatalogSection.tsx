@@ -4,14 +4,14 @@ import { ArrowRight } from 'lucide-react';
 export function CatalogSection() {
   const categories = [
     {
-      name: "Filtros Especializados",
+      name: "Filtros de Calidad",
       image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782145244/filtro-aceite-motor-camion-mercedes-benz_tqiujd.jpg",
       description: "Filtros de aire, combustible, aceite y habitáculo para máximo rendimiento."
     },
     {
       name: "Sistema de Frenos",
       image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782145754/cintas-frenos-aire-camion-mercedes-benz_dex7xo.jpg",
-      description: "Pastillas, discos, tambores y componentes."
+      description: "Pastillas, discos y reparación de calipers."
     },
     {
       name: "Motor y Componentes",
@@ -21,12 +21,12 @@ export function CatalogSection() {
     {
       name: "Transmisión y Embrague",
       image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146608/engranajes-caja-transmision-mercedes-benz_tjw85r.jpg",
-      description: "Placas, discos, sincronizados y accesorios."
+      description: "Placas, discos, crapodinas y engranajes."
     },
     {
       name: "Suspensión y Dirección",
       image: "https://res.cloudinary.com/dcasnymut/image/upload/v1782146858/suspension-direccion-camion-mercedes-benz_lugqxa.jpg",
-      description: "Amortiguadores, resortes, bujes y extremos."
+      description: "Amortiguadores, bujes, extremos y barras."
     },
     {
       name: "Sistema Eléctrico",

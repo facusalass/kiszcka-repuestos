@@ -43,7 +43,7 @@ export function HeroSection() {
               </div>
 
               <p className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0 mt-5 sm:mt-6">
-                Especialistas en líneas pesadas y utilitarios, contamos con repuestos originales y alternativos de primeras marcas. Contamos con stock permanente para mantener sus unidades en movimiento.
+                Especialista en líneas pesadas y utilitarios, contamos con repuestos originales y alternativos de primeras marcas. Stock permanente para mantener sus unidades en movimiento.
               </p>
             </div>
 

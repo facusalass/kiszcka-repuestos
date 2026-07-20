@@ -5,7 +5,7 @@ export function TrustSection() {
     {
       icon: Wrench,
       title: "Especialistas Mercedes-Benz",
-      description: "Más de 35 años de experiencia. Conocemos cada componente de tu flota y te asesoramos técnicamente al instante."
+      description: "Más de 35 años de experiencia. Conocemos cada componente de tu unidad y te asesoramos técnicamente al instante."
     },
     {
       icon: Truck,
@@ -20,7 +20,7 @@ export function TrustSection() {
     {
       icon: Shield,
       title: "Garantía de Calidad",
-      description: "Respaldo total. Trabajamos con importadores directos, proveedores certificados y marcas de primera línea alemana."
+      description: "Respaldo total. Trabajamos con importadores directos, proveedores certificados y marcas de primera línea."
     }
   ];
 
