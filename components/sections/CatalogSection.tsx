@@ -50,10 +50,10 @@ export function CatalogSection() {
             id="catalog-heading"
             className="text-[2rem] min-[380px]:text-3xl md:text-4xl lg:text-[2.5rem] font-black text-[#0B1E3B] mb-5 font-montserrat tracking-tight leading-tight md:leading-none"
           >
-            Catálogo de Repuestos Especializados.
+            Catálogo de Repuestos Provisto por las Fábricas.
           </h2>
           <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">
-            Amplio stock físico de repuestos originales y alternativos certificados para mantener tu unidad trabajando sin interrupciones.
+            Amplio stock físico de repuestos originales y alternativos para mantener tu unidad trabajando sin interrupciones.
           </p>
         </div>
 

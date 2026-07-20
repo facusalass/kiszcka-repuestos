@@ -66,12 +66,12 @@ export function Header() {
             className="flex min-w-0 items-center group focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/50 rounded-lg"
             aria-label="Volver al inicio - Kiszcka Repuestos"
           >
-            <div className="relative h-[55px] w-[180px] sm:h-[65px] sm:w-[220px] md:h-[75px] md:w-[260px] lg:h-[85px] lg:w-[290px] shrink-0 transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
+            <div className="relative h-[70px] w-[230px] sm:h-[75px] sm:w-[250px] md:h-[82px] md:w-[270px] lg:h-[90px] lg:w-[300px] shrink-0 transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
               <Image
                 src={logoUrl}
                 alt="Logo Kiszcka Repuestos"
                 fill
-                sizes="(min-width: 1024px) 290px, (min-width: 768px) 260px, 220px"
+                sizes="(min-width: 1024px) 300px, (min-width: 768px) 270px, 230px"
                 className="object-contain brightness-0 invert drop-shadow-md" 
                 priority
               />

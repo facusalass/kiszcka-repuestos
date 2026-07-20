@@ -59,12 +59,14 @@ export function ContactSection() {
               Llamanos directamente para consultas urgentes o asesoramiento específico en mostrador.
             </p>
 
-            <div className="mt-auto flex items-center justify-center h-[52px]">
-              <a
-                className="inline-block text-2xl lg:text-3xl font-black text-[#0B1E3B] hover:text-[#22D3EE] active:text-[#22D3EE] transition-colors font-montserrat tracking-tighter"
-                aria-label="Llamar a la línea telefónica"
-              >
-                4462894
+            <div className="mt-auto space-y-2.5 w-full">
+              <a href="tel:3624462894" className="flex items-center justify-center gap-2 bg-slate-50 text-[#0B1E3B] px-4 py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-slate-100 active:bg-slate-100 transition-colors border border-slate-100">
+                <Phone className="w-4 h-4 text-[#22D3EE]" strokeWidth={2} />
+                Fijo: 362 4462894
+              </a>
+              <a href="tel:+5493624540740" className="flex items-center justify-center gap-2 bg-slate-50 text-[#0B1E3B] px-4 py-3 rounded-lg font-montserrat font-bold text-sm hover:bg-slate-100 active:bg-slate-100 transition-colors border border-slate-100">
+                <Phone className="w-4 h-4 text-[#22D3EE]" strokeWidth={2} />
+                Cel: +54 9 362 454-0740
               </a>
             </div>
           </div>

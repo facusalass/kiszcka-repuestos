@@ -28,7 +28,7 @@ export function AboutSection() {
                 Kiszcka Repuestos nació hace más de 35 años con una visión clara: convertirse en el Aliado Estratégico de los transportistas de la región. Lo que comenzó como un mostrador local en Resistencia, hoy se ha consolidado como un Nodo Logístico referente para camiones Mercedes-Benz.
               </p>
               <p>
-                No somos simples vendedores de repuestos. A lo largo de los años, nos especializamos en conocer la mecánica pesada de cada chasis, motor y transmisión. Esta dedicación técnica es lo que nos permite construir relaciones de confianza duraderas con flotas, cooperativas y talleres de todo el país.
+                No somos simples vendedores de repuestos. A lo largo de los años, nos especializamos en conocer la mecánica pesada de cada unidad. Esta dedicación técnica es lo que nos permite construir relaciones de confianza duraderas con flotas, cooperativas y talleres de todo el país.
               </p>
               <p className="font-medium text-[#0B1E3B] pl-5 border-l-[3px] border-[#22D3EE] py-1">
                 Nuestro compromiso sigue intacto: ofrecer piezas certificadas, asesoramiento preciso y la tranquilidad de que, con nosotros, el camión vuelve a la ruta.

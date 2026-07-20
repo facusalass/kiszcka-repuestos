@@ -41,7 +41,7 @@ export function TrustSection() {
             El Taller no Espera. Nosotros tampoco
           </h2>
           <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">
-            Entendemos la logística pesada. Nuestro objetivo es entregarte la pieza exacta en el menor tiempo posible, estés donde estés.
+            Entendemos la logística pesada. Nuestro objetivo es entregarte la pieza correcta en el menor tiempo posible, estés donde estés.
           </p>
         </div>
 

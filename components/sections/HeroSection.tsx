@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { MessageCircle, CheckCircle2, MapPin, X, ExternalLink } from 'lucide-react';
+import { MessageCircle, CheckCircle2, MapPin, X, ExternalLink, Phone, Clock } from 'lucide-react';
 
 export function HeroSection() {
   // Estado para controlar si el mapa está visible o no
@@ -19,24 +19,31 @@ export function HeroSection() {
           
           {/* Left Content */}
           <div className="lg:col-span-7 space-y-7 sm:space-y-8 text-center lg:text-left text-white pr-0 lg:pr-8 scroll-reveal">
-            
-            {/* Badge Metálico */}
-            <div className="inline-flex max-w-full items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 px-3.5 sm:px-4 py-1.5 rounded-xl shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse"></span>
-              <span className="text-[11px] lg:text-xs font-bold tracking-widest text-slate-300 uppercase">
-                Más de 35 años de experiencia
-              </span>
-            </div>
 
             {/* Título High-Impact */}
             <div className="space-y-4">
               <h1 className="font-montserrat text-[2rem] min-[360px]:text-[2.25rem] min-[420px]:text-[2.55rem] sm:text-5xl lg:text-[4rem] font-black leading-[1.04] sm:leading-[1.05] tracking-tight text-white uppercase drop-shadow-md">
                 <span className="block">REPUESTOS</span>
                 <span className="block">MERCEDES-BENZ</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">EN RESISTENCIA.</span>
+                <span className="block">
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">EN RESISTENCIA,</span>
+                  <span className="inline-flex items-center gap-1 sm:gap-1.5">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">CHACO.</span>
+                    <MapPin className="w-5 h-5 min-[420px]:w-6 min-[420px]:h-6 sm:w-7 sm:h-7 text-[#22D3EE] shrink-0" strokeWidth={2.5} />
+                  </span>
+                </span>
               </h1>
+
+              {/* Badge Metálico */}
+              <div className="inline-flex max-w-full items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 px-3.5 sm:px-4 py-1.5 rounded-xl shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse"></span>
+                <span className="text-[11px] lg:text-xs font-bold tracking-widest text-slate-300 uppercase">
+                  Más de 35 años de experiencia
+                </span>
+              </div>
+
               <p className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0 mt-5 sm:mt-6">
-                La confianza de Kiszcka Repuestos. Especialistas en stock original y alternativo certificado para mantener tu flota siempre en movimiento.
+                Especialistas en líneas pesadas y utilitarios, contamos con repuestos originales y alternativos de primeras marcas. Contamos con stock permanente para mantener sus unidades en movimiento.
               </p>
             </div>
 
@@ -44,7 +51,7 @@ export function HeroSection() {
             <div className="space-y-3 sm:space-y-4 pt-2 sm:pt-4 flex flex-col items-stretch sm:items-center lg:items-start">
               <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3 rounded-xl w-full sm:w-fit text-left">
                 <CheckCircle2 className="w-5 h-5 text-[#22D3EE] flex-shrink-0" />
-                <span className="text-sm font-medium tracking-wide text-slate-200">Catálogo de piezas originales y alternativas</span>
+                <span className="text-sm font-medium tracking-wide text-slate-200">Disponemos de catálogos de piezas originales y alternativas</span>
               </div>
               <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3 rounded-xl w-full sm:w-fit text-left">
                 <CheckCircle2 className="w-5 h-5 text-[#22D3EE] flex-shrink-0" />
@@ -53,20 +60,34 @@ export function HeroSection() {
             </div>
 
             {/* CTA High-Ticket */}
-            <div className="pt-4 lg:pt-8">
+            <div className="pt-4 lg:pt-8 space-y-3">
               <a
                 href="https://wa.me/5493624540740"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-[#102C57] px-8 py-4 rounded-xl font-bold text-[15px] tracking-wide shadow-xl hover:bg-gray-100 active:bg-gray-100 hover:shadow-2xl active:shadow-2xl transition-all duration-300 border border-transparent hover:border-gray-300 active:border-gray-300 font-montserrat uppercase"
-                aria-label="Consultar stock ahora por WhatsApp"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white text-[#102C57] px-6 py-3.5 rounded-xl font-bold text-[14px] sm:text-[15px] tracking-wide shadow-xl hover:bg-gray-100 active:bg-gray-100 hover:shadow-2xl active:shadow-2xl transition-all duration-300 border border-transparent hover:border-gray-300 active:border-gray-300 font-montserrat uppercase"
+                aria-label="Consultar por WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110 group-active:scale-110" />
-                CONSULTAR STOCK AHORA
+                Consultar por WhatsApp
               </a>
-              <p className="mt-4 text-xs text-slate-500 font-medium tracking-wide text-center lg:text-left">
-                * Respuesta rápida garantizada en horario comercial.
-              </p>
+
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-1 text-[13px] text-slate-300 font-medium">
+                <span className="inline-flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 text-[#22D3EE]" strokeWidth={2} />
+                  Cel: +54 9 362 454-0740
+                </span>
+                <span className="text-slate-600 hidden sm:inline">|</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 text-[#22D3EE]" strokeWidth={2} />
+                  Fijo: 362 4462894
+                </span>
+              </div>
+
+              <div className="flex items-center justify-center lg:justify-start gap-1.5 text-[12px] text-slate-400">
+                <Clock className="w-3.5 h-3.5 text-[#22D3EE] shrink-0" strokeWidth={2} />
+                <span>Lun-Vie 8:00-12:30 / 15:30-19:30 · Sáb 8:00-12:30</span>
+              </div>
             </div>
 
           </div>
@@ -79,7 +100,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-[#102C57]/20 mix-blend-multiply z-10 pointer-events-none"></div>
               
               <Image
-                src="https://res.cloudinary.com/dcasnymut/image/upload/v1782143956/camion-mercedes-benz-repuestos-resistencia.jpg_rodfvm.avif" 
+                src="https://res.cloudinary.com/dcasnymut/image/upload/v1784584108/camion_gdzdmn.png" 
                 alt="Camión Mercedes-Benz clásico y repuestos pesados en Resistencia"
                 fill
                 priority
